@@ -10,6 +10,7 @@ const Login = () => {
     
     const [emailId , setEmailId] = useState("")
     const [password , setPassword] = useState("")
+    const [error , setError] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate()
    const handleLogin = async ()=>{
@@ -22,7 +23,8 @@ const Login = () => {
      dispatch(addUser(res.data))
      navigate("/feed")
     }catch(err){
-        console.log(err)
+      setError(err?.response?.data || "Something went wrong ")
+        console.error()
     }
    }
 
@@ -43,6 +45,7 @@ const Login = () => {
  
 </fieldset>
     </div>
+    <p className='text-red-600'>{error}</p>
     <div className="card-actions justify-center mt-8">
       <button onClick={handleLogin} className="btn btn-primary">Login</button>
     </div>
