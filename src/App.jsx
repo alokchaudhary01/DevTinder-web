@@ -7,7 +7,7 @@ import appstore from "./utils/appstore";
 import Feed from "./components/Feed"
 import Connections from './components/Connections';
 import ConnectionRequests from "./components/ConnectionRequests";
-import SignUp from "./components/SignUp";
+import Libdas from "./components/Libdas"
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path="/profile" element={<Profile/>} />
           <Route path="/connections" element={<Connections/>} />
           <Route path="/requests" element={<ConnectionRequests/>} />
-          <Route path="/signUp" element={<SignUp/>} />
+          <Route path="/requ" element={<Libdas/>} />
           
           </Route>
           
